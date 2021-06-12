@@ -22,8 +22,19 @@ public class BeatObject : MonoBehaviour
             {
                 // this is the state at which we can confirm the button has been pressed in the correct position
                 gameObject.SetActive(false);
+                Debug.Log("hit");
+                Debug.Log(transform.position.x);
 
-                GameManager.instance.BeatHit();
+                if (Mathf.Abs(transform.position.x) < 70)
+                {
+                    GameManager.instance.BeatHit();
+                    Debug.Log("normal hit");
+                }
+                else if (Mathf.Abs(transform.position.x) < 20)
+                {
+                    GameManager.instance.BeatHit();
+                    Debug.Log("perfect hit");
+                }
             }
         }
     }

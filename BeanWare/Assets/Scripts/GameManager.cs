@@ -37,6 +37,13 @@ public class GameManager : MonoBehaviour
         player.incrementCombo();
     }
 
+    public void PerfectHit()
+    {
+        Debug.Log("Hit Perfectly!");
+        player.incrementCombo();
+        player.incrementCombo();
+    }
+
     public void BeatMissed()
     {
         // this is triggered when the ingredient is NOT successfully hit within bounds or missed entirely

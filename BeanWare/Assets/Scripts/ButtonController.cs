@@ -12,13 +12,4 @@ public class ButtonController : MonoBehaviour
     {
         bx2d = GetComponent<BoxCollider2D>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("spacebar DOWN");
-        }
-    }
 }
